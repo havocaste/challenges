@@ -1,0 +1,57 @@
+
+body {
+  background-image: url("images/wallpaper-login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+}
+#content {
+  background-color: rgba(126, 117, 139, 0.65);
+  border: 2px solid black;
+  padding: 30px;
+  margin: 200px auto;
+  max-width: 500px;
+  width: 460px;
+}
+h1, label, input {
+  font-family: "Arial", sans-serif;
+}
+h1 {
+  background-color: rgba(195, 134, 145, 0.55);
+  border: 3px solid black;
+  margin-bottom: 60px;
+  margin-left: 11px;
+  padding: 10px;
+  text-align: center;
+  width: 401px;
+}
+label {
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px; 
+}
+#label1 {
+  margin-right: 33px;
+}
+#label2 {
+  margin-right: 57px;
+}
+
+input {
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #5e5e5e;
+  width: 262px;
+  height: 18px;
+}
+.ver-space {
+  margin: 40px;
+}
+#reset {
+  margin-left: 11px;
+}
+#reset, #submit {
+  font-size: 16px;
+  box-sizing: content-box;
+  width: 200px;
+}
