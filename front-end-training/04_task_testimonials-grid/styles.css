@@ -1,0 +1,217 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+}
+
+.page {
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-left: 32px;
+    padding-bottom: 35px;
+}
+
+.first-review {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+}
+
+.second-review {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.third-review,
+.fifth-review {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.fourth-review {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.account {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.photo-icon img {
+    border-radius: 25px;
+    height: 32px;
+    width: 32px;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    margin-left: 16px;
+}
+
+.name {
+    color: hsl(0, 0%, 81%);
+}
+
+.verified {
+    color: hsla(0, 0%, 81%, 0.5);
+    font-size: 11px;
+}
+
+.preamble {
+    color: hsla(210, 46%, 95%, 0.95);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.quotations {
+    color: hsla(0, 0%, 81%, 0.7);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.first-review img {
+    border: 2px solid hsl(261, 73%, 69%);
+}
+
+.fourth-review img {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+.third-review .name,
+.third-review .preamble,
+.third-review .quotations,
+.fifth-review .name,
+.fifth-review .preamble,
+.fifth-review .quotations {
+    color: hsla(217, 19%, 35%, 0.8);
+    font-weight: 600;
+}
+
+.third-review .verified,
+.third-review .quotations,
+.fifth-review .verified,
+.fifth-review .quotations {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+@media only screen and (max-width: 375px) {
+
+    .page {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 70px 0;
+    }
+
+    .box {
+        margin: 0 25px 25px 25px;
+    }
+
+    .box:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .preamble,
+    .quotations {
+        margin-right: 30px;
+    }
+
+    .first-review .preamble {
+        margin-right: 34px;
+    }
+
+    .first-review .quotations {
+        margin-right: 45px;
+    }
+
+    .fifth-review .quotations {
+        margin-right: 28px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .page {
+        height: 100vh;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        height: 572px;
+        width: 1100px;
+    }
+
+    .first-review {
+        background-position-x: 80%;
+        height: calc(28200%/572);
+        margin-bottom: 30px;
+        order: -3;
+        width: calc(54000%/1100);
+    }
+
+    .second-review {
+        height: calc(28200%/572);
+        margin-bottom: 30px;
+        margin-left: 30px;
+        order: -2;
+        width: calc(25000%/1100);
+    }
+
+    .third-review {
+        box-shadow: 35px 65px 70px -30px hsla(219, 29%, 14%, 0.2);
+        height: calc(26300%/572);
+        position: relative;
+        top: -263px;
+        width: calc(25000%/1100);
+    }
+
+    .fourth-review {
+        height: calc(26300%/572);
+        position: relative;
+        margin-left: 30px;
+        top: -263px;
+        width: calc(54000%/1100);
+    }
+
+    .fifth-review {
+        box-shadow: 35px 65px 70px -30px hsla(219, 29%, 14%, 0.2);
+        height: 572px;
+        margin-left: 30px;
+        order: -1;
+        width: calc(25000%/1100);
+    }
+
+    .preamble,
+    .quotations {
+        margin-right: 30px;
+    }
+
+    .fourth-review .quotations {
+        margin-right: 40px;
+    }
+
+    .fifth-review .quotations {
+        margin-right: 22px;
+    }
+}
