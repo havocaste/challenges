@@ -1,0 +1,369 @@
+/*
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("fonts/josefin-sans-bold.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("fonts/josefin-sans-regular.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    /*background-color: ;*/
+    display: flex;
+    height: 55vw;
+    justify-content: center;
+
+}
+
+img {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.page {
+    background-repeat: no-repeat;
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    width: 1440px;
+}
+
+.page-dark {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url('images/bg-desktop-dark.jpg');
+}
+
+.page-light {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url('images/bg-desktop-light.jpg');
+}
+
+.app-container {
+    margin-top: 80px;
+    width: 540px;
+    height: 725px;
+}
+
+.heading {
+    cursor: default;
+    display: flex;
+    height: 30px;
+    font-weight: 400;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.title {
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 14px;
+}
+
+.heading img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.add-todo {
+    border-radius: 4px;
+    display: flex;
+    height: 65px;
+    margin-top: 50px;
+    width: 540px;
+}
+
+.add-todo-dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.add-todo-light {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.input-border,
+.box-border {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    height: 26px;
+    justify-content: center;
+    margin: auto;
+    width: 26px;
+}
+
+.add-todo:hover .input-border {
+    background: linear-gradient(135deg, #75A9F5, #9A70D8);
+}
+
+
+.box-border:hover {
+    background: linear-gradient(135deg, #75A9F5, #9A70D8);
+}
+
+.input-border-dark,
+.box-border-dark {
+    background-color: hsl(237, 14%, 26%);
+}
+
+.input-border-light,
+.box-border-light {
+    background-color: hsl(236, 33%, 92%);
+}
+
+.input-box,
+.todo-box {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    height: 23px;
+    justify-content: center;
+    width: 23px;
+}
+
+.todo-box {
+    cursor: pointer;
+}
+
+.input-box-dark,
+.todo-box-dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.input-box-light,
+.todo-box-light {
+    background-color: hsl(360, 100%, 100%);
+}
+
+.box-background {
+    background: linear-gradient(135deg, #75A9F5, #9A70D8);
+}
+
+.todo-tick {
+    display: none;
+}
+
+.add-todo #new-todo {
+    background-color: transparent;
+    border: none;
+    caret-color: hsl(220, 98%, 61%);
+    font-size: 18px;
+    height: 65px;
+    outline: none;
+    resize: none;
+    width: 470px;
+}
+
+.add-todo-dark #new-todo {
+    color: hsl(234, 39%, 85%);
+}
+
+.add-todo-light #new-todo {
+    color: hsl(235, 19%, 35%);
+}
+
+.add-todo-dark ::placeholder {
+    color: hsla(234, 11%, 52%, 0.8);
+}
+
+.add-todo-light ::placeholder {
+    color: hsl(233, 11%, 84%);
+}
+
+.todo-list {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    margin-top: 25px;
+    width: 540px;
+}
+
+.todo-list-dark {
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: 0 15px 65px 0 hsla(0, 0%, 0%, 1.0);
+}
+
+.todo-list-light {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 15px 65px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.items-container {
+    height: 390px;
+    overflow: scroll;
+    width: 540px;
+}
+
+.todo-item {
+    display: flex;
+    height: 65px;
+    width: 540px;
+}
+
+.todo-item-dark {
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+
+.todo-item-light {
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+}
+
+.todo-text {
+    -webkit-user-select: none;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    height: 65px;
+    user-select: none;
+    width: 400px;
+}
+
+.todo-text-dark {
+    color: hsl(234, 39%, 85%);
+}
+
+.todo-text-dark p:hover {
+    color: hsl(236, 33%, 92%);
+    cursor: pointer;
+}
+
+.todo-text-light {
+    color: hsl(235, 19%, 35%);
+}
+
+.todo-text-light p:hover {
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+}
+
+.todo-text-tick-dark {
+    color: hsl(233, 14%, 35%);
+    text-decoration-color: hsl(233, 14%, 35%);
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+
+.todo-text-tick-dark p:hover {
+    color: hsl(233, 14%, 35%);
+}
+
+.todo-text-tick-light {
+    color: hsl(233, 11%, 84%);
+    text-decoration: 1px solid line-through hsl(233, 11%, 84%);
+}
+
+.todo-text-tick-light p:hover {
+    color: hsl(233, 11%, 84%);
+}
+
+.todo-cross {
+    cursor: pointer;
+    height: 18px;
+    margin: auto;
+    visibility: hidden;
+    width: 18px;
+}
+
+.todo-item:hover .todo-cross {
+    visibility: visible;
+}
+
+.bottom-menu {
+    align-self: flex-end;
+    display: flex;
+    height: 50px;
+    width: 540px;
+}
+
+.bottom-menu-dark {
+    color: hsl(233, 14%, 35%);
+}
+
+.bottom-menu-light {
+    color: hsl(236, 9%, 61%);
+}
+
+.remaining-count {
+    align-items: center;
+    display: flex;
+    font-size: calc(135px/10);
+    height: 50px;
+    margin-left: 25px;
+    width: 162px;
+}
+
+.todo-filter {
+    align-items: center;
+    display: flex;
+    font-size: calc(135px/10);
+    font-weight: 700;
+    height: 50px;
+    justify-content: space-between;
+    width: 166px;
+}
+
+.clear-option {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    height: 50px;
+    justify-content: end;
+    margin-right: 25px;
+    width: 162px;
+}
+
+.bottom-menu-dark .hover-bottom:hover {
+    color: hsl(236, 33%, 92%);
+    cursor: pointer;
+}
+
+.bottom-menu-light .hover-bottom:hover {
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+}
+
+.filter-color {
+    color: hsl(220, 98%, 61%);
+}
+
+.filter-color span:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+.feature-tip {
+    align-items: center;
+    display: flex;
+    font-size: calc(135px/10);
+    height: 110px;
+    width: 540px;
+    justify-content: center;
+}
+
+.feature-tip-dark {
+    color: hsl(233, 14%, 35%);
+}
+
+.feature-tip-light {
+    color: hsl(236, 9%, 61%);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg" href="images/favicon-32x32.png"/>
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+<div class="page page-dark">
+
+    <div class="app-container">
+
+        <div class="heading">
+
+            <div class="title">TODO</div>
+
+            <img class="theme-icon switch" src="images/icon-sun.svg"
+                 alt="sun-icon"/>
+
+        </div>
+
+        <div class="add-todo add-todo-dark">
+
+            <div class="input-border box-border-dark">
+                <div class="input-box todo-box-dark"></div>
+            </div>
+
+            <label for="new-todo">
+                <input id="new-todo" name="add-todo" type="text"
+                       placeholder="Create a new todo..." autocomplete="off"/>
+            </label>
+
+        </div>
+
+        <div class="todo-list todo-list-dark">
+
+            <div class="items-container"></div>
+
+            <div class="bottom-menu bottom-menu-dark">
+
+                <div class="remaining-count">
+                    <span class="items-number">0 items left</span>
+                </div>
+
+                <div class="todo-filter">
+                    <div class="all-todo hover-bottom filter-color">
+                        <span>All</span>
+                    </div>
+                    <div class="active-todo hover-bottom">
+                        <span>Active</span>
+                    </div>
+                    <div class="completed-todo hover-bottom">
+                        <span>Completed</span>
+                    </div>
+                </div>
+
+                <div class="clear-option">
+                    <span class="hover-bottom">Clear completed</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="feature-tip feature-tip-dark">
+            <p>Drag and drop to reorder list</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<!--
+
+<div class="todo-item">
+    <div class="todo-box"></div>
+    <div class="todo-text"></div>
+    <div class="todo-cross">
+        <img src="images/icon-cross.svg" alt="icon-cross"/>
+    </div>
+</div>
+
+-->
